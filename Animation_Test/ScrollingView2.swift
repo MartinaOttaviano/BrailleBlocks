@@ -20,9 +20,9 @@ struct ScrollingView2: View {
                 VStack{
                     BrailleView()
 //                Text("T")
-                    Text("\(letter)")
-                    .font(.system(size: 50))
-                    .foregroundColor(Color.init(red: 0/255, green: 132/255, blue: 255/255))
+                    Text("**\(letter)**")
+                    .font(.custom("Menlo", size: 50))
+                    .foregroundColor(.black)
                 }
                 }
             }
@@ -40,12 +40,12 @@ struct ScrollingView2: View {
         }, label: {
             ZStack{
                 Rectangle()
-                    .frame(width: 84, height: 50)
+                    .frame(width: 100, height: 60)
                     .cornerRadius(20)
-                    .foregroundColor(Color.init(red: 0/255, green: 132/255, blue: 255/255))
-                Text("Done")
-                    .font(.system(size: 18))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color.init(red: 254/255, green: 191/255, blue: 0/255))
+                Text("Help")
+                    .font(.system(size: 30))
+                    .foregroundColor(.black)
             }
         }).frame(width: 84, height: 150, alignment: .bottom)
                 

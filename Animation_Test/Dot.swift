@@ -33,6 +33,7 @@ struct DotView: View {
                     .animation(Animation.interpolatingSpring(stiffness: 150, damping: 15).delay(0.15))
                     .font(.system(size: 80))
                 .foregroundColor(Color(.init(red: 0/255, green: 132/255, blue: 255/255, alpha: 1)))
+                
             }
             else{
                 

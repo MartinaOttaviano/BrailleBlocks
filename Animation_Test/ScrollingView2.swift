@@ -15,12 +15,12 @@ struct ScrollingView2: View {
         VStack{
             
         TabView{
-            ForEach(0..<24) {i in
-                ForEach(letters, id:\.self) { letter in
+            ForEach(0..<29) {i in
+                ForEach(0..<letters.count, id:\.self) { num in
                 VStack{
                     BrailleView()
 //                Text("T")
-                    Text("**\(letter)**")
+                    Text("**\(letters[num])**")
                     .font(.custom("Menlo", size: 50))
                     .foregroundColor(.black)
                 }
@@ -49,6 +49,7 @@ struct ScrollingView2: View {
                     .foregroundColor(.black)
             }
             }.navigationBarBackButtonHidden(true)
+            
         }).frame(width: 84, height: 150, alignment: .bottom)
         
                 
@@ -58,6 +59,15 @@ struct ScrollingView2: View {
             
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                Button(action: {
+                    print ("Well done!")
+                }, label: {
+                    NavigationLink(destination: CompleteView()) {
+                        Text("Done")
+                    }
+                })
+            }
         }
             
         

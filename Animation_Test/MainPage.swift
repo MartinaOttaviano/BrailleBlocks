@@ -18,6 +18,7 @@ struct MainPageView: View {
                 Text("")
                     .navigationTitle("BrailleBlocks")
                     .navigationBarTitleDisplayMode(.inline)
+                    
             }.frame(width: UIScreen.main.bounds.width, height: 50)
             
             Picker("", selection: $choice) {

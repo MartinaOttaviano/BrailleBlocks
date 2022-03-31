@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		634F2E5A27F4DA6E0094D3A0 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F2E5927F4DA6E0094D3A0 /* HelpView.swift */; };
 		63F5A23A27F3314B0052BE88 /* Animation_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A23927F3314B0052BE88 /* Animation_TestApp.swift */; };
 		63F5A23C27F3314B0052BE88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A23B27F3314B0052BE88 /* ContentView.swift */; };
 		63F5A23E27F3314C0052BE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F5A23D27F3314C0052BE88 /* Assets.xcassets */; };
@@ -16,7 +17,6 @@
 		63F5A25727F3314C0052BE88 /* Animation_TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A25627F3314C0052BE88 /* Animation_TestUITestsLaunchTests.swift */; };
 		63F5A26427F355290052BE88 /* BrailleTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A26327F355290052BE88 /* BrailleTrial.swift */; };
 		63F5A26627F359150052BE88 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A26527F359150052BE88 /* Dot.swift */; };
-		63F5A26827F36E0F0052BE88 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A26727F36E0F0052BE88 /* ScrollingView.swift */; };
 		63F5A26A27F386810052BE88 /* ScrollingView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A26927F386810052BE88 /* ScrollingView2.swift */; };
 		63F5A26C27F39D550052BE88 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A26B27F39D550052BE88 /* MainPage.swift */; };
 		63F5A26E27F4C7020052BE88 /* TheoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A26D27F4C7020052BE88 /* TheoryView.swift */; };
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		634F2E5927F4DA6E0094D3A0 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		63F5A23627F3314B0052BE88 /* Animation_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animation_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F5A23927F3314B0052BE88 /* Animation_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation_TestApp.swift; sourceTree = "<group>"; };
 		63F5A23B27F3314B0052BE88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		63F5A25627F3314C0052BE88 /* Animation_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		63F5A26327F355290052BE88 /* BrailleTrial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleTrial.swift; sourceTree = "<group>"; };
 		63F5A26527F359150052BE88 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
-		63F5A26727F36E0F0052BE88 /* ScrollingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
 		63F5A26927F386810052BE88 /* ScrollingView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingView2.swift; sourceTree = "<group>"; };
 		63F5A26B27F39D550052BE88 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		63F5A26D27F4C7020052BE88 /* TheoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryView.swift; sourceTree = "<group>"; };
@@ -115,9 +115,9 @@
 				63F5A26F27F4CA580052BE88 /* Fonts */,
 				63F5A23927F3314B0052BE88 /* Animation_TestApp.swift */,
 				63F5A26B27F39D550052BE88 /* MainPage.swift */,
+				634F2E5927F4DA6E0094D3A0 /* HelpView.swift */,
 				63F5A26D27F4C7020052BE88 /* TheoryView.swift */,
 				63F5A26327F355290052BE88 /* BrailleTrial.swift */,
-				63F5A26727F36E0F0052BE88 /* ScrollingView.swift */,
 				63F5A26927F386810052BE88 /* ScrollingView2.swift */,
 				63F5A26527F359150052BE88 /* Dot.swift */,
 				63F5A23B27F3314B0052BE88 /* ContentView.swift */,
@@ -297,7 +297,7 @@
 				63F5A26E27F4C7020052BE88 /* TheoryView.swift in Sources */,
 				63F5A26427F355290052BE88 /* BrailleTrial.swift in Sources */,
 				63F5A23C27F3314B0052BE88 /* ContentView.swift in Sources */,
-				63F5A26827F36E0F0052BE88 /* ScrollingView.swift in Sources */,
+				634F2E5A27F4DA6E0094D3A0 /* HelpView.swift in Sources */,
 				63F5A23A27F3314B0052BE88 /* Animation_TestApp.swift in Sources */,
 				63F5A26C27F39D550052BE88 /* MainPage.swift in Sources */,
 				63F5A26627F359150052BE88 /* Dot.swift in Sources */,

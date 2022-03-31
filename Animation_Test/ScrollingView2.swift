@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 struct ScrollingView2: View {
-    let letters: [String] = ["T","H","E","R","A","B","B","I","T","H","O","P","P","E","D","O","N","T","H","E","C","H","A","I","R"]
+    let letters: [String] = ["T","H","E","_","R","A","B","B","I","T","_","H","O","P","P","E","D","_","O","N","_","T","H","E","_","C","H","A","I","R"]
     var body: some View{
-        
+        NavigationView{
         VStack{
             
         TabView{
@@ -38,6 +38,7 @@ struct ScrollingView2: View {
         Button(action: {
             print("Done")
         }, label: {
+            NavigationLink(destination: HelpView()){
             ZStack{
                 Rectangle()
                     .frame(width: 100, height: 60)
@@ -47,11 +48,19 @@ struct ScrollingView2: View {
                     .font(.system(size: 30))
                     .foregroundColor(.black)
             }
+            }.navigationBarBackButtonHidden(true)
         }).frame(width: 84, height: 150, alignment: .bottom)
+        
                 
                 
         }.padding(.top, 50)
             .padding(.bottom, 50)
+            
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+            
+        
     }
 }
 struct ScrollingView2_Previews: PreviewProvider {

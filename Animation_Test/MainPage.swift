@@ -14,42 +14,33 @@ struct MainPageView: View {
         
         VStack{
             NavigationView{
-                
+
                 Text("")
                     .navigationTitle("BrailleBlocks")
                     .navigationBarTitleDisplayMode(.inline)
-            }
+            }.frame(width: UIScreen.main.bounds.width, height: 50)
             
             Picker("", selection: $choice) {
-                NavigationLink(destination: {
-                    MainPageView()
-                }, label: {
-                    Text("Theory")
-                    
-                }).tag(0)
                 
-                NavigationLink(destination: {
-                    ScrollingView2()
-                }, label: {
-                    Text("Practice")
-                    
-                }).tag(1)
+                    Text("Theory").tag(0)
+                
+                
+                    Text("Practice").tag(1)
                 
             }
             .pickerStyle(.segmented)
-            ZStack{ Color.init(red: 254/255, green: 191/255, blue: 0/255)
+            
             if choice == 0{
                 
             TheoryView()
         }
             else if choice == 1{
-                ZStack{
-                    Color.white.ignoresSafeArea()
+                
                     ScrollingView2()
-                }
+                
             }
         }
-        }.ignoresSafeArea()
+        
     }
 }
 struct MainPageView_Previews: PreviewProvider {

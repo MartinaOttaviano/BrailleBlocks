@@ -17,7 +17,7 @@ struct BrailleView: View {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 30))
                             .foregroundColor(.gray)
-                            .opacity(0.4)
+                            .opacity(0)
                     Spacer()
                     Rectangle()
                         .frame(width: 230, height: 350)
@@ -28,7 +28,7 @@ struct BrailleView: View {
                         Image(systemName: "chevron.right")
                             .font(.system(size: 30))
                             .foregroundColor(.gray)
-                            .opacity(0.4)
+                            .opacity(0)
                     
                 }.padding(.horizontal, 30)
                     

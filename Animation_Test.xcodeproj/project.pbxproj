@@ -117,10 +117,10 @@
 				63F5A26F27F4CA580052BE88 /* Fonts */,
 				63F5A23927F3314B0052BE88 /* Animation_TestApp.swift */,
 				63F5A26B27F39D550052BE88 /* MainPage.swift */,
-				634F2E5927F4DA6E0094D3A0 /* HelpView.swift */,
 				63F5A26D27F4C7020052BE88 /* TheoryView.swift */,
-				63F5A26327F355290052BE88 /* BrailleTrial.swift */,
 				63F5A26927F386810052BE88 /* ScrollingView2.swift */,
+				63F5A26327F355290052BE88 /* BrailleTrial.swift */,
+				634F2E5927F4DA6E0094D3A0 /* HelpView.swift */,
 				634F2E5B27F5E5150094D3A0 /* CompleteView.swift */,
 				63F5A26527F359150052BE88 /* Dot.swift */,
 				63F5A23B27F3314B0052BE88 /* ContentView.swift */,
@@ -469,6 +469,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Animation-Test-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BrailleBlocks;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -501,6 +502,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Animation-Test-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BrailleBlocks;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

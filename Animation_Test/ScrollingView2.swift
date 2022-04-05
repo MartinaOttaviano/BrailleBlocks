@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ScrollingView2: View {
     @State private var tabTag: Int = 0
+    @State private var showingSheet = false
     let letters: [String] = ["T","H","E","_","R","A","B","B","I","T","_","H","O","P","P","E","D","_","O","N","_","T","H","E","_","C","H","A","I","R"]
     var body: some View{
         NavigationView{
@@ -37,15 +38,15 @@ struct ScrollingView2: View {
             
        
         Button(action: {
-            print("Done")
+            print("Well done!")
         }, label: {
-            NavigationLink(destination: HelpView()){
+            NavigationLink(destination: CompleteView()){
             ZStack{
                 Rectangle()
-                    .frame(width: 100, height: 60)
+                    .frame(width: 140, height: 60)
                     .cornerRadius(20)
                     .foregroundColor(Color.init(red: 254/255, green: 191/255, blue: 0/255))
-                Text("Help")
+                Text("Finish")
                     .font(.system(size: 30))
                     .foregroundColor(.black)
             }
@@ -62,12 +63,14 @@ struct ScrollingView2: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Button(action: {
-                    print ("Well done!")
+                    showingSheet.toggle()
                 }, label: {
-                    NavigationLink(destination: CompleteView()) {
-                        Text("Done")
-                    }
-                })
+                    
+                        Image(systemName: "info.circle")
+                    
+                }).sheet(isPresented: $showingSheet) {
+                    HelpView()
+                }
             }
         }
             

@@ -32,11 +32,18 @@ struct TheoryView: View {
                         .multilineTextAlignment(.leading)
                         .padding(.trailing, 68)
                     
-                    Image("braille_diagram-1")
+                    ZStack{
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .frame(width: UIScreen.main.bounds.width*1, height: UIScreen.main.bounds.height*0.57)
+                            .offset(x: 0, y: 0)
+                            .cornerRadius(40)
+                    Image("alfabeto1")
                         .resizable()
-                        .frame(width: UIScreen.main.bounds.width*1, height: UIScreen.main.bounds.height*0.55)
+                        .frame(width: UIScreen.main.bounds.width*0.85, height: UIScreen.main.bounds.height*0.49)
                         .offset(x: 0, y: 0)
-                        .cornerRadius(40)
+                        
+                    }
                     
                     
                     Text("**PRACTICE**")
@@ -45,8 +52,8 @@ struct TheoryView: View {
                         .multilineTextAlignment(.leading)
                         .padding(.trailing, 160)
                         .padding(.top, 30)
-                    Text("Once you get familiar with the alphabet, you can start practicing in the dedicated section: a sentence will be generated and displayed on the screen, enclosed with a grid for each character. Progress by completing the grid with the correct letter and scrolling in either direction for swapping letters (for a space(_) the grid must be left blank). Ask for a hint by pressing on the “Help” button and click “Done” once you completed the exercise.")
-                        .frame(width: UIScreen.main.bounds.width*0.85, height: UIScreen.main.bounds.height*0.3, alignment: .top)
+                    Text("Once you get familiar with the alphabet, you can start practicing in the dedicated section: a sentence will be generated and displayed on the screen, enclosed with a grid for each character. Progress by completing the grid with the correct letter and scrolling in either direction for swapping letters (for a space(_) the grid must be left blank). Ask for a hint by pressing on the “i” button and click “Finish” once you completed the exercise.")
+                        .frame(width: UIScreen.main.bounds.width*0.85, height: UIScreen.main.bounds.height*0.35, alignment: .top)
                         .padding(.horizontal)
                         .multilineTextAlignment(.leading)
                         .font(.system(size: 19))

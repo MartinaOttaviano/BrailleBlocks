@@ -31,7 +31,7 @@ struct CompleteView: View {
                         .frame(width: 1450, height: 80)
                     
                 }
-                .padding(.bottom,160)
+                .padding(.bottom,140)
                 
             }
             

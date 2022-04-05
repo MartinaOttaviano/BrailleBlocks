@@ -29,6 +29,7 @@ struct MainPageView: View {
                     Text("Practice").tag(1)
                 
             }
+            .frame(width: UIScreen.main.bounds.width*0.88, height: 30, alignment: .center)
             .pickerStyle(.segmented)
             
             if choice == 0{

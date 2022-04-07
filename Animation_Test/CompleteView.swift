@@ -71,6 +71,7 @@ struct CompleteView: View {
                                     Text("Next")
                                         .font(.system(size: 30))
                                         .foregroundColor(.black)
+                                    
                                 }
                             
                             

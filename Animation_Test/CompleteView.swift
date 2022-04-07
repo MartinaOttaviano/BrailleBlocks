@@ -8,7 +8,9 @@
 import Foundation
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct CompleteView: View {
+    @Environment(\.dismiss) private var dismiss
     var body: some View{
         NavigationView{
         VStack{
@@ -41,7 +43,7 @@ struct CompleteView: View {
                     .font(.custom("Menlo", size: 50))
                 HStack{
                     Button(action: {
-                        print("Try again")
+                        self.dismiss()
                     }, label: {
                         
                             ZStack{
@@ -86,6 +88,10 @@ struct CompleteView: View {
 
 struct CompleteView_Previews: PreviewProvider {
     static var previews: some View {
-        CompleteView()
+        if #available(iOS 15.0, *) {
+            CompleteView()
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }

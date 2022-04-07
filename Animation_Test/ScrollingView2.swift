@@ -11,6 +11,8 @@ import SwiftUI
 struct ScrollingView2: View {
     @State private var tabTag: Int = 0
     @State private var showingSheet = false
+    @State private var showAlert = false
+    @State private var goAhead = false
     let letters: [String] = ["T","H","E","_","R","A","B","B","I","T","_","H","O","P","P","E","D","_","O","N","_","T","H","E","_","C","H","A","I","R"]
     var body: some View{
         NavigationView{
@@ -37,22 +39,44 @@ struct ScrollingView2: View {
             Frase(tabTag: $tabTag)
             
        
-        Button(action: {
-            print("Well done!")
-        }, label: {
-            NavigationLink(destination: CompleteView()){
-            ZStack{
-                Rectangle()
-                    .frame(width: 140, height: 60)
-                    .cornerRadius(20)
-                    .foregroundColor(Color.init(red: 254/255, green: 191/255, blue: 0/255))
-                Text("Finish")
-                    .font(.system(size: 30))
-                    .foregroundColor(.black)
+            if #available(iOS 15.0, *) {
+                Button(action: {
+                    showAlert = true
+                }, label: {
+//                    NavigationLink(destination: CompleteView()){
+                        ZStack{
+                            Rectangle()
+                                .frame(width: 140, height: 60)
+                                .cornerRadius(20)
+                                .foregroundColor(Color.init(red: 254/255, green: 191/255, blue: 0/255))
+                            Text("Finish")
+                                .font(.system(size: 30))
+                                .foregroundColor(.black)
+                        }
+//                    }.navigationBarBackButtonHidden(true)
+                    
+                }).frame(width: 84, height: 150, alignment: .bottom)
+                    .alert("Are you sure you want to end this practice session?", isPresented:$showAlert){
+                        Button ("Cancel"){
+                            
+                        }
+                      
+                        Button (action: {
+                            goAhead.toggle()
+                        }, label: {
+                            Text("Yes")
+                        })
+//                            .sheet(isPresented: $goAhead){
+//                            CompleteView()
+//                        }
+                    }
+                    .fullScreenCover(isPresented: $goAhead){
+                        CompleteView()
+                    }
+            } else {
+                // Fallback on earlier versions
             }
-            }.navigationBarBackButtonHidden(true)
-            
-        }).frame(width: 84, height: 150, alignment: .bottom)
+           
         
                 
                 

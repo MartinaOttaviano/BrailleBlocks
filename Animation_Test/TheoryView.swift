@@ -13,8 +13,12 @@ struct TheoryView: View {
         NavigationView{
             
             
-            ZStack{ Color.init(red: 254/255, green: 191/255, blue: 0/255)
+            ZStack{
+                Color.init(red: 254/255, green: 191/255, blue: 0/255)
+                    .ignoresSafeArea()
                 ScrollView{
+                    Spacer()
+                    Spacer()
                     Text("**INTRODUCTION**")
                         .frame(width: UIScreen.main.bounds.width*0.9, height: 40)
                         .font(.custom("Menlo", size: 40))
@@ -61,8 +65,9 @@ struct TheoryView: View {
                 
                     .navigationTitle("")
                     .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarHidden(true)
             }
-        }.ignoresSafeArea()
+        }
     }
 }
 struct TheoryView_Previews: PreviewProvider {

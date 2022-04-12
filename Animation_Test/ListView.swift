@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ListView: View {
-    @State private var text: String = ""
+    @Binding var text: String
     @State private var isEditing = false
     let elements: [String] = ["The rabbit hopped on the chair","The boat is crossing the ocean","Kermit fell from the roof","Elmo stares at your soul while you sleep"]
     @State var selectedRow: String? = nil
@@ -17,8 +17,11 @@ struct ListView: View {
     
     var body: some View{
         NavigationView{
+            
             VStack{
+                
                 HStack{
+                    
                     TextField("Type your content here", text: $text)
                         .padding(10)
                         .padding(.horizontal, 5)
@@ -31,7 +34,6 @@ struct ListView: View {
                         Button(action: {
                             self.isEditing = false
                             self.text = ""
-                            
                         })
                         {
                             Text("Cancel")
@@ -40,8 +42,9 @@ struct ListView: View {
                         .transition(.move(edge:.trailing))
                         .animation(.default)
                     }
-                } . frame(width: UIScreen.main.bounds.width*0.9, height: 100)
-                    .padding(.top,30)
+                }
+                .frame(width: UIScreen.main.bounds.width*0.9, height: 100)
+                .padding(.top, 100)
                 
                 List {
                     Section(header:
@@ -104,7 +107,7 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView()
+        ListView(text:.constant(""))
     }
 }
 

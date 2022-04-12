@@ -81,11 +81,10 @@ struct ScrollingView2: View {
                 
                 
         }.padding(.top, 50)
-            .padding(.bottom, 50)
-            
-            .navigationTitle("")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
+        .padding(.bottom, 50)
+        .navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
                 Button(action: {
                     showingSheet.toggle()
                 }, label: {

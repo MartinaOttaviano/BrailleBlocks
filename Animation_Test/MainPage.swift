@@ -38,7 +38,7 @@ struct MainPageView: View {
         }
             else if choice == 1{
                 
-                    ScrollingView2()
+                ListView()
                 
             }
         }

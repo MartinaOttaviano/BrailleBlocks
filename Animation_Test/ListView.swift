@@ -19,7 +19,7 @@ struct ListView: View {
         NavigationView{
             
             VStack{
-                Text("**PRACTICE SECTION**")
+                Text("**HI! BEFORE STARTING**")
                     .font(.custom("Menlo", size: 25))
                     .multilineTextAlignment(.leading)
                     .frame(width: UIScreen.main.bounds.width, height: 100, alignment: .bottom)

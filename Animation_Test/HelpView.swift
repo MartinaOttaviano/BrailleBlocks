@@ -63,9 +63,10 @@ struct HelpView: View {
                 
                 Text("**T**")
                     .font(.custom("Menlo", size: 50))
-                    .foregroundColor(.black)
+                    
                 
                 Text("The rabbit hopped on the chair")
+                    .foregroundColor(.gray)
                     .opacity(0.5)
                     .font(.system(size: 22))
                     .frame(width: UIScreen.main.bounds.width, height: 20, alignment: .bottom)
@@ -87,6 +88,7 @@ struct HelpView: View {
                     .opacity(0.3)
                     .disabled(true)
             } .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.725, alignment: .bottom)
+            .padding(.top,120)
         }
     }
 

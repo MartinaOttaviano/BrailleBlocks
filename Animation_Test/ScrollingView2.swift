@@ -25,7 +25,7 @@ struct ScrollingView2: View {
                         //                Text("T")
                         Text("**\(letters[num])**")
                             .font(.custom("Menlo", size: 50))
-                            .foregroundColor(.black)
+                            
                     }
                     .tag(num)
                 }
@@ -111,7 +111,7 @@ struct Frase: View{
                 Text(String(frase[frase.index(frase.startIndex, offsetBy: index)]))
                     .opacity(index == tabTag ? 1 : 0.5)
                     .font(.system(size: 22).weight(index == tabTag ? .bold : .regular))
-                    .foregroundColor(index == tabTag ? .blue : .black)
+                    .foregroundColor(index == tabTag ? .blue : .gray)
                     
             }
         }

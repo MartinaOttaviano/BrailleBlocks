@@ -11,6 +11,7 @@ import SwiftUI
 @available(iOS 15.0, *)
 struct CompleteView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.colorScheme) var colorScheme
     var body: some View{
         NavigationView{
         VStack{
@@ -18,9 +19,11 @@ struct CompleteView: View {
             ScrollView(.horizontal, showsIndicators: false){
                 VStack{
                     
-                    Image("braille_string")
-                        .frame(width: 1450, height: 80)
-//                        .opacity(0.6)
+                        Image(colorScheme == .light ? "string_black" : "string_white")
+                            .frame(width: 1450, height: 80)
+    //
+                    
+                    
                     
                     Text("The rabbit hopped on the chair")
                         .frame(width: 1450, height: 80,alignment: .center)
@@ -81,7 +84,8 @@ struct CompleteView: View {
                 }
             }
 //            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.35,alignment: .center)
-            } .navigationTitle("")
+        }
+        .navigationTitle("")
                 
         }
     }

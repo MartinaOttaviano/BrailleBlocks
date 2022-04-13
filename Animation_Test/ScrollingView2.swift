@@ -49,8 +49,8 @@ struct ScrollingView2: View {
                                 .frame(width: 140, height: 60)
                                 .cornerRadius(20)
                                 .foregroundColor(Color.init(red: 254/255, green: 191/255, blue: 0/255))
-                            Text("Finish")
-                                .font(.system(size: 30))
+                            Text("**FINISH**")
+                                .font(.custom("Menlo", size: 25))
                                 .foregroundColor(.black)
                         }
 //                    }.navigationBarBackButtonHidden(true)

@@ -52,8 +52,8 @@ struct CompleteView: View {
                                     .cornerRadius(20)
                                     .foregroundColor(Color.init(red: 254/255, green: 191/255, blue: 0/255))
                                     
-                                Text("Try again")
-                                    .font(.system(size: 30))
+                                Text("**TRY AGAIN**")
+                                    .font(.custom("Menlo", size: 23))
                                     .foregroundColor(.black)
                             }
                     }).padding(.horizontal,10)
@@ -68,8 +68,8 @@ struct CompleteView: View {
                                         .frame(width: 150, height: 60)
                                         .cornerRadius(20)
                                         .foregroundColor(Color.init(red: 254/255, green: 191/255, blue: 0/255))
-                                    Text("Next")
-                                        .font(.system(size: 30))
+                                    Text("**NEXT**")
+                                        .font(.custom("Menlo", size: 23))
                                         .foregroundColor(.black)
                                     
                                 }

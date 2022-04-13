@@ -19,9 +19,13 @@ struct ListView: View {
         NavigationView{
             
             VStack{
-                
+                Text("**PRACTICE SECTION**")
+                    .font(.custom("Menlo", size: 25))
+                    .multilineTextAlignment(.leading)
+                    .frame(width: UIScreen.main.bounds.width, height: 100, alignment: .bottom)
                 HStack{
                     
+                        
                     TextField("Type your content here", text: $text)
                         .padding(10)
                         .padding(.horizontal, 5)
@@ -30,6 +34,7 @@ struct ListView: View {
                         .onTapGesture{
                             self.isEditing = true
                         }
+                
                     if isEditing{
                         Button(action: {
                             self.isEditing = false
@@ -43,8 +48,8 @@ struct ListView: View {
                         .animation(.default)
                     }
                 }
-                .frame(width: UIScreen.main.bounds.width*0.9, height: 100)
-                .padding(.top, 100)
+                .frame(width: UIScreen.main.bounds.width*0.9, height: 50)
+                .padding(10)
                 
                 List {
                     Section(header:
@@ -88,8 +93,8 @@ struct ListView: View {
                                 .frame(width: 140, height: 60)
                                 .cornerRadius(20)
                                 .foregroundColor(Color.init(red: 254/255, green: 191/255, blue: 0/255))
-                            Text("Start")
-                                .font(.system(size: 30))
+                            Text("**START**")
+                                .font(.custom("Menlo", size: 25))
                                 .foregroundColor(.black)
                         }
                         

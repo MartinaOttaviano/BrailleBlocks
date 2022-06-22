@@ -12,6 +12,9 @@
 		63B73D072800617D00761F9F /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B73D062800617D00761F9F /* ListView.swift */; };
 		63D3B8EA2805A0C200B75F63 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B8E92805A0C200B75F63 /* GridComponent.swift */; };
 		63D3B8EC2805AA3E00B75F63 /* TextFieldTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B8EB2805AA3E00B75F63 /* TextFieldTrial.swift */; };
+		63D3B8EF280711A900B75F63 /* LettersStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B8ED280711A900B75F63 /* LettersStore.xcdatamodeld */; };
+		63D3B8F2280711FF00B75F63 /* StoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B8F1280711FF00B75F63 /* StoreController.swift */; };
+		63D3B8F4280712B700B75F63 /* LettersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B8F3280712B700B75F63 /* LettersManager.swift */; };
 		63F5A23A27F3314B0052BE88 /* Animation_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A23927F3314B0052BE88 /* Animation_TestApp.swift */; };
 		63F5A23C27F3314B0052BE88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A23B27F3314B0052BE88 /* ContentView.swift */; };
 		63F5A23E27F3314C0052BE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F5A23D27F3314C0052BE88 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		63B73D062800617D00761F9F /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		63D3B8E92805A0C200B75F63 /* GridComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
 		63D3B8EB2805AA3E00B75F63 /* TextFieldTrial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTrial.swift; sourceTree = "<group>"; };
+		63D3B8EE280711A900B75F63 /* LettersStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LettersStore.xcdatamodel; sourceTree = "<group>"; };
+		63D3B8F1280711FF00B75F63 /* StoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreController.swift; sourceTree = "<group>"; };
+		63D3B8F3280712B700B75F63 /* LettersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersManager.swift; sourceTree = "<group>"; };
 		63F5A23627F3314B0052BE88 /* Animation_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animation_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F5A23927F3314B0052BE88 /* Animation_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation_TestApp.swift; sourceTree = "<group>"; };
 		63F5A23B27F3314B0052BE88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +102,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63D3B8F0280711EE00B75F63 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63D3B8F1280711FF00B75F63 /* StoreController.swift */,
+				63D3B8F3280712B700B75F63 /* LettersManager.swift */,
+				63D3B8ED280711A900B75F63 /* LettersStore.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		63F5A22D27F3314B0052BE88 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +149,7 @@
 				634F2E5B27F5E5150094D3A0 /* CompleteView.swift */,
 				63F5A26527F359150052BE88 /* Dot.swift */,
 				63F5A23B27F3314B0052BE88 /* ContentView.swift */,
+				63D3B8F0280711EE00B75F63 /* Model */,
 				63F5A23D27F3314C0052BE88 /* Assets.xcassets */,
 				63F5A23F27F3314C0052BE88 /* Preview Content */,
 			);
@@ -306,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63F5A26A27F386810052BE88 /* ScrollingView2.swift in Sources */,
+				63D3B8EF280711A900B75F63 /* LettersStore.xcdatamodeld in Sources */,
 				63F5A26E27F4C7020052BE88 /* TheoryView.swift in Sources */,
 				63B73D072800617D00761F9F /* ListView.swift in Sources */,
 				634F2E5C27F5E5150094D3A0 /* CompleteView.swift in Sources */,
@@ -316,7 +334,9 @@
 				63D3B8EC2805AA3E00B75F63 /* TextFieldTrial.swift in Sources */,
 				63F5A23A27F3314B0052BE88 /* Animation_TestApp.swift in Sources */,
 				63F5A26C27F39D550052BE88 /* MainPage.swift in Sources */,
+				63D3B8F4280712B700B75F63 /* LettersManager.swift in Sources */,
 				63F5A26627F359150052BE88 /* Dot.swift in Sources */,
+				63D3B8F2280711FF00B75F63 /* StoreController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +691,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		63D3B8ED280711A900B75F63 /* LettersStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				63D3B8EE280711A900B75F63 /* LettersStore.xcdatamodel */,
+			);
+			currentVersion = 63D3B8EE280711A900B75F63 /* LettersStore.xcdatamodel */;
+			path = LettersStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 63F5A22E27F3314B0052BE88 /* Project object */;
 }

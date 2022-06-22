@@ -13,7 +13,9 @@ struct ScrollingView2: View {
     @State private var showingSheet = false
     @State private var showAlert = false
     @State private var goAhead = false
-    let letters: [String] = ["T","H","E","_","R","A","B","B","I","T","_","H","O","P","P","E","D","_","O","N","_","T","H","E","_","C","H","A","I","R"]
+    @Binding var text: String
+    
+    @State var letters: [String] = []
     var body: some View{
         NavigationView{
         VStack{
@@ -36,7 +38,7 @@ struct ScrollingView2: View {
 //        Text(frase)
 //            .opacity(0.5)
 //            .font(.system(size: 22))
-            Frase(tabTag: $tabTag)
+            Frase(tabTag: $tabTag, text: $text)
             
        
             if #available(iOS 15.0, *) {
@@ -95,7 +97,17 @@ struct ScrollingView2: View {
                     HelpView()
                 }
             }
-        }
+        }.onAppear(perform: {
+            for num in 0..<text.count{
+                if(String(text[text.index(text.startIndex, offsetBy: num)]) == " "){
+                    letters.append("_")
+                }
+                else{
+                letters.append(String(text[text.index(text.startIndex, offsetBy: num)]) .uppercased())
+                }
+                
+            }
+        })
             
         
     }
@@ -104,8 +116,9 @@ struct ScrollingView2: View {
 
 struct Frase: View{
     @Binding var tabTag: Int
+    @Binding var text: String
     var body: some View{
-        let frase = "The rabbit hopped on the chair"
+        let frase = "\(text)"
         HStack(spacing: 0){
             ForEach(0..<frase.count, id:\.self){ index in
                 Text(String(frase[frase.index(frase.startIndex, offsetBy: index)]))
@@ -120,8 +133,8 @@ struct Frase: View{
 }
 
 
-struct ScrollingView2_Previews: PreviewProvider {
-    static var previews: some View {
-        ScrollingView2()
-    }
-}
+//struct ScrollingView2_Previews: PreviewProvider {
+//    static var previews: some View {
+////        ScrollingView2("", text: $text)
+//    }
+//}

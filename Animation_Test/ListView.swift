@@ -85,7 +85,7 @@ struct ListView: View {
                     print("")
                 }, label: {
                     NavigationLink(destination:
-                                    ScrollingView2()
+                                    ScrollingView2(text: $text)
                                     .navigationBarHidden(true)
                                     .navigationBarBackButtonHidden(true)) {
                         ZStack{

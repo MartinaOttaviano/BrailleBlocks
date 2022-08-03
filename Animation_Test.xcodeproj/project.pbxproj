@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		634F2E5A27F4DA6E0094D3A0 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F2E5927F4DA6E0094D3A0 /* HelpView.swift */; };
 		634F2E5C27F5E5150094D3A0 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F2E5B27F5E5150094D3A0 /* CompleteView.swift */; };
+		639D652A289B1FC10036FCE3 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D6529289B1FC10036FCE3 /* Dictionary.swift */; };
+		639D652C289B226A0036FCE3 /* Squares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D652B289B226A0036FCE3 /* Squares.swift */; };
 		63B73D072800617D00761F9F /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B73D062800617D00761F9F /* ListView.swift */; };
 		63D3B8EA2805A0C200B75F63 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B8E92805A0C200B75F63 /* GridComponent.swift */; };
 		63D3B8EC2805AA3E00B75F63 /* TextFieldTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B8EB2805AA3E00B75F63 /* TextFieldTrial.swift */; };
@@ -52,6 +54,8 @@
 /* Begin PBXFileReference section */
 		634F2E5927F4DA6E0094D3A0 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		634F2E5B27F5E5150094D3A0 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
+		639D6529289B1FC10036FCE3 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		639D652B289B226A0036FCE3 /* Squares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squares.swift; sourceTree = "<group>"; };
 		63B73D062800617D00761F9F /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		63D3B8E92805A0C200B75F63 /* GridComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
 		63D3B8EB2805AA3E00B75F63 /* TextFieldTrial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTrial.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				63F5A23927F3314B0052BE88 /* Animation_TestApp.swift */,
 				63F5A26B27F39D550052BE88 /* MainPage.swift */,
 				63D3B8E92805A0C200B75F63 /* GridComponent.swift */,
+				639D6529289B1FC10036FCE3 /* Dictionary.swift */,
+				639D652B289B226A0036FCE3 /* Squares.swift */,
 				63D3B8EB2805AA3E00B75F63 /* TextFieldTrial.swift */,
 				63F5A26D27F4C7020052BE88 /* TheoryView.swift */,
 				63F5A26927F386810052BE88 /* ScrollingView2.swift */,
@@ -323,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63F5A26A27F386810052BE88 /* ScrollingView2.swift in Sources */,
+				639D652A289B1FC10036FCE3 /* Dictionary.swift in Sources */,
 				63D3B8EF280711A900B75F63 /* LettersStore.xcdatamodeld in Sources */,
 				63F5A26E27F4C7020052BE88 /* TheoryView.swift in Sources */,
 				63B73D072800617D00761F9F /* ListView.swift in Sources */,
@@ -337,6 +344,7 @@
 				63D3B8F4280712B700B75F63 /* LettersManager.swift in Sources */,
 				63F5A26627F359150052BE88 /* Dot.swift in Sources */,
 				63D3B8F2280711FF00B75F63 /* StoreController.swift in Sources */,
+				639D652C289B226A0036FCE3 /* Squares.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Animation_Test/Preview Content\"";
@@ -516,6 +525,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Xcode1.Animation-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -527,6 +537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Animation_Test/Preview Content\"";
@@ -549,6 +560,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Xcode1.Animation-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -11,7 +11,7 @@ import SwiftUI
 struct ListView: View {
     @Binding var text: String
     @State private var isEditing = false
-    let elements: [String] = ["The rabbit hopped on the chair","The boat is crossing the ocean","Kermit fell from the roof","Elmo stares at your soul while you sleep"]
+    let elements: [String] = ["The rabbit hopped on the chair","The boat is crossing the ocean","Go to the third floor of the building","The supermarket closes at midnight"]
     @State var selectedRow: String? = nil
     
     
@@ -25,7 +25,7 @@ struct ListView: View {
                     .frame(width: UIScreen.main.bounds.width, height: 100, alignment: .bottom)
                 HStack{
                     
-                        
+                    
                     TextField("Type your content here", text: $text)
                         .padding(10)
                         .padding(.horizontal, 5)
@@ -34,7 +34,7 @@ struct ListView: View {
                         .onTapGesture{
                             self.isEditing = true
                         }
-                
+                    
                     if isEditing{
                         Button(action: {
                             self.isEditing = false
@@ -85,24 +85,25 @@ struct ListView: View {
                     print("")
                 }, label: {
                     NavigationLink(destination:
-                                    ScrollingView2(text: $text)
-                                    .navigationBarHidden(true)
-                                    .navigationBarBackButtonHidden(true)) {
-                        ZStack{
-                            Rectangle()
-                                .frame(width: 140, height: 60)
-                                .cornerRadius(20)
-                                .foregroundColor(Color.init(red: 254/255, green: 191/255, blue: 0/255))
-                            Text("**START**")
-                                .font(.custom("Menlo", size: 25))
-                                .foregroundColor(.black)
+                                    ScrollingView2(text: $text, text2: $selectedRow)
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true)) {
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 140, height: 60)
+                                    .cornerRadius(20)
+                                    .foregroundColor(Color.init(red: 254/255, green: 191/255, blue: 0/255))
+                                Text("**START**")
+                                    .font(.custom("Menlo", size: 25))
+                                    .foregroundColor(.black)
+                            }
+                            
+                            
                         }
-                        
-                        
-                    }
+                    
                 })
-                    .padding(.bottom, 340)
-                    .padding(.top,20)
+                .padding(.bottom, 340)
+                .padding(.top,20)
                 
             }
         }

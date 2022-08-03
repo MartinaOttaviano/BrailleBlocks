@@ -14,7 +14,7 @@ struct ScrollingView2: View {
     @State private var showAlert = false
     @State private var goAhead = false
     @Binding var text: String
-    
+    @Binding var text2: String?
     @State var letters: [String] = []
     var body: some View{
         NavigationView{
@@ -38,7 +38,7 @@ struct ScrollingView2: View {
 //        Text(frase)
 //            .opacity(0.5)
 //            .font(.system(size: 22))
-            Frase(tabTag: $tabTag, text: $text)
+            Frase(tabTag: $tabTag, text: $text, text2: $text2)
             
        
             if #available(iOS 15.0, *) {
@@ -98,6 +98,8 @@ struct ScrollingView2: View {
                 }
             }
         }.onAppear(perform: {
+            
+            if(text != ""){
             for num in 0..<text.count{
                 if(String(text[text.index(text.startIndex, offsetBy: num)]) == " "){
                     letters.append("_")
@@ -106,6 +108,17 @@ struct ScrollingView2: View {
                 letters.append(String(text[text.index(text.startIndex, offsetBy: num)]) .uppercased())
                 }
                 
+            }
+            }else{
+                for num in 0..<(text2 ?? "").count{
+                    if(String((text2 ?? "")[(text2 ?? "").index((text2 ?? "").startIndex, offsetBy: num)]) == " "){
+                        letters.append("_")
+                    }
+                    else{
+                    letters.append(String((text2 ?? "")[(text2 ?? "").index((text2 ?? "").startIndex, offsetBy: num)]) .uppercased())
+                    }
+                    
+                }
             }
         })
             
@@ -117,8 +130,9 @@ struct ScrollingView2: View {
 struct Frase: View{
     @Binding var tabTag: Int
     @Binding var text: String
+    @Binding var text2: String?
     var body: some View{
-        let frase = "\(text)"
+        let frase = "\(text != "" ? text : text2 ?? "")"
         HStack(spacing: 0){
             ForEach(0..<frase.count, id:\.self){ index in
                 Text(String(frase[frase.index(frase.startIndex, offsetBy: index)]))

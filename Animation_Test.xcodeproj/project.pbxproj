@@ -12,6 +12,7 @@
 		639D652A289B1FC10036FCE3 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D6529289B1FC10036FCE3 /* Dictionary.swift */; };
 		639D652C289B226A0036FCE3 /* Squares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D652B289B226A0036FCE3 /* Squares.swift */; };
 		63B73D072800617D00761F9F /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B73D062800617D00761F9F /* ListView.swift */; };
+		63CD65A9289C50E800344B0D /* NewCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CD65A8289C50E800344B0D /* NewCompleteView.swift */; };
 		63D3B8EA2805A0C200B75F63 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B8E92805A0C200B75F63 /* GridComponent.swift */; };
 		63D3B8EC2805AA3E00B75F63 /* TextFieldTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B8EB2805AA3E00B75F63 /* TextFieldTrial.swift */; };
 		63D3B8EF280711A900B75F63 /* LettersStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B8ED280711A900B75F63 /* LettersStore.xcdatamodeld */; };
@@ -57,6 +58,7 @@
 		639D6529289B1FC10036FCE3 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		639D652B289B226A0036FCE3 /* Squares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squares.swift; sourceTree = "<group>"; };
 		63B73D062800617D00761F9F /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		63CD65A8289C50E800344B0D /* NewCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCompleteView.swift; sourceTree = "<group>"; };
 		63D3B8E92805A0C200B75F63 /* GridComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
 		63D3B8EB2805AA3E00B75F63 /* TextFieldTrial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTrial.swift; sourceTree = "<group>"; };
 		63D3B8EE280711A900B75F63 /* LettersStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LettersStore.xcdatamodel; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				63F5A26327F355290052BE88 /* BrailleTrial.swift */,
 				634F2E5927F4DA6E0094D3A0 /* HelpView.swift */,
 				634F2E5B27F5E5150094D3A0 /* CompleteView.swift */,
+				63CD65A8289C50E800344B0D /* NewCompleteView.swift */,
 				63F5A26527F359150052BE88 /* Dot.swift */,
 				63F5A23B27F3314B0052BE88 /* ContentView.swift */,
 				63D3B8F0280711EE00B75F63 /* Model */,
@@ -342,6 +345,7 @@
 				63F5A23A27F3314B0052BE88 /* Animation_TestApp.swift in Sources */,
 				63F5A26C27F39D550052BE88 /* MainPage.swift in Sources */,
 				63D3B8F4280712B700B75F63 /* LettersManager.swift in Sources */,
+				63CD65A9289C50E800344B0D /* NewCompleteView.swift in Sources */,
 				63F5A26627F359150052BE88 /* Dot.swift in Sources */,
 				63D3B8F2280711FF00B75F63 /* StoreController.swift in Sources */,
 				639D652C289B226A0036FCE3 /* Squares.swift in Sources */,

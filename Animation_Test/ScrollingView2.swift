@@ -27,6 +27,7 @@ struct ScrollingView2: View {
                         //                Text("T")
                         Text("**\(letters[num])**")
                             .font(.custom("Menlo", size: 50))
+                            .textCase(.uppercase)
                             
                     }
                     .tag(num)
@@ -73,7 +74,7 @@ struct ScrollingView2: View {
 //                        }
                     }
                     .fullScreenCover(isPresented: $goAhead){
-                        CompleteView()
+                        NewCompleteView(text: $text, text2: $text2)
                     }
             } else {
                 // Fallback on earlier versions

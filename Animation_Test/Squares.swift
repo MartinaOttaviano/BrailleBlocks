@@ -22,43 +22,43 @@ struct Squares: View {
 
                     //1
                     Image(systemName: brailleDict[letter]!.digits()[0] == 1 ? "circle.fill" : "")
-                        .font(.system(size: 24))
+                        .font(.system(size: 18))
                         .foregroundColor(.black)
                         .opacity(1)
-                        .frame(width: 25, height: 25, alignment: .center)
+                        .frame(width: 19, height: 19, alignment: .center)
                     //3
                     Image(systemName: brailleDict[letter]!.digits()[2] == 1 ? "circle.fill" : "")
-                        .font(.system(size: 24))
+                        .font(.system(size: 18))
                         .foregroundColor(.black)
                         .opacity(1)
-                        .frame(width: 25, height: 25, alignment: .center)
+                        .frame(width: 19, height: 19, alignment: .center)
                     //5
                     Image(systemName: brailleDict[letter]!.digits()[4] == 1 ? "circle.fill" : "")
-                        .font(.system(size: 24))
+                        .font(.system(size: 18))
                         .foregroundColor(.black)
                         .opacity(1)
-                        .frame(width: 25, height: 25, alignment: .center)
+                        .frame(width: 19, height: 19, alignment: .center)
                 }
                 
                 VStack{
                     //2
                     Image(systemName: brailleDict[letter]!.digits()[1] == 1 ? "circle.fill" : "")
-                        .font(.system(size: 24))
+                        .font(.system(size: 18))
                         .foregroundColor(.black)
                         .opacity(1)
-                        .frame(width: 25, height: 25, alignment: .center)
+                        .frame(width: 19, height: 19, alignment: .center)
                     //4
                     Image(systemName: brailleDict[letter]!.digits()[3] == 1 ? "circle.fill" : "")
-                        .font(.system(size: 24))
+                        .font(.system(size: 18))
                         .foregroundColor(.black)
                         .opacity(1)
-                        .frame(width: 25, height: 25, alignment: .center)
+                        .frame(width: 19, height: 19, alignment: .center)
                     //6
                     Image(systemName: brailleDict[letter]!.digits()[5] == 1 ? "circle.fill" : "")
-                        .font(.system(size: 24))
+                        .font(.system(size: 18))
                         .foregroundColor(.black)
                         .opacity(1)
-                        .frame(width: 25, height: 25, alignment: .center)
+                        .frame(width: 19, height: 19, alignment: .center)
                 }
             }
             

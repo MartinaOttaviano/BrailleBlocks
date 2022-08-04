@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct HelpView: View {
+    @State var letters: [String] = []
     @State var letter: String
     @State var array: [String] = []
 //    @State var letters: [String] = []
@@ -67,6 +68,7 @@ struct HelpView: View {
                     VStack{
                 Text("**\(letter)**")
                     .font(.custom("Menlo", size: 50))
+                    .textCase(.uppercase)
                     }
                     .tag(num)
                 }
@@ -127,6 +129,6 @@ extension Int {
 }
 struct HelpView_Previews: PreviewProvider {
     static var previews: some View {
-        HelpView(letter: " ")
+        HelpView(letter: "a")
     }
 }

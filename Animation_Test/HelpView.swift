@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 struct HelpView: View {
+    @State var letter: String
+    @State var array: [String] = []
+//    @State var letters: [String] = []
     var body: some View{
         
             VStack{
@@ -22,17 +25,17 @@ struct HelpView: View {
                     
                     HStack{
                         VStack{
-                            Image(systemName: "circle")
+                            Image(systemName: brailleDict[letter]!.digits2()[0] == 1 ? "circle.fill" : "circle")
                                 .font(.system(size: 68))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
-                            Image(systemName: "circle.fill")
+                            Image(systemName: brailleDict[letter]!.digits2()[2] == 1 ? "circle.fill" : "circle")
                                 .font(.system(size: 68))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
-                            Image(systemName: "circle.fill")
+                            Image(systemName: brailleDict[letter]!.digits2()[4] == 1 ? "circle.fill" : "circle")
                                 .font(.system(size: 68))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
@@ -41,17 +44,17 @@ struct HelpView: View {
                         }
                         
                         VStack{
-                            Image(systemName: "circle.fill")
+                            Image(systemName: brailleDict[letter]!.digits2()[1] == 1 ? "circle.fill" : "circle")
                                 .font(.system(size: 68))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
-                            Image(systemName: "circle.fill")
+                            Image(systemName: brailleDict[letter]!.digits2()[3] == 1 ? "circle.fill" : "circle")
                                 .font(.system(size: 68))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
-                            Image(systemName: "circle")
+                            Image(systemName: brailleDict[letter]!.digits2()[5] == 1 ? "circle.fill" : "circle")
                                 .font(.system(size: 68))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
@@ -60,16 +63,20 @@ struct HelpView: View {
                         }
                     }
                 }
-                
-                Text("**T**")
+                ForEach(0..<letter.count, id:\.self) { num in
+                    VStack{
+                Text("**\(letter)**")
                     .font(.custom("Menlo", size: 50))
+                    }
+                    .tag(num)
+                }
                     
                 
-                Text("The rabbit hopped on the chair")
-                    .foregroundColor(.gray)
-                    .opacity(0.5)
-                    .font(.system(size: 22))
-                    .frame(width: UIScreen.main.bounds.width, height: 20, alignment: .bottom)
+//                Text("The rabbit hopped on the chair")
+//                    .foregroundColor(.gray)
+//                    .opacity(0.5)
+//                    .font(.system(size: 22))
+//                    .frame(width: UIScreen.main.bounds.width, height: 20, alignment: .bottom)
                 
                 
                 Button(action: {
@@ -92,9 +99,34 @@ struct HelpView: View {
         }
     }
 
+extension BinaryInteger {
+    var digits2: [Int] {
+        return String(describing: self) .compactMap({
+            Int(String($0))
+        })
+    }
+}
+extension Int {
+    func digits2() -> [Int] {
+        var digits2: [Int] = []
+        var num = self
 
+        digits2.append(num % 10)
+
+        while num >= 10  {
+            num = num / 10
+            digits2.append(num % 10)
+        }
+        if(digits2.count == 5){
+            digits2.append(0)
+            
+        }
+
+        return digits2.reversed()
+    }
+}
 struct HelpView_Previews: PreviewProvider {
     static var previews: some View {
-        HelpView()
+        HelpView(letter: " ")
     }
 }

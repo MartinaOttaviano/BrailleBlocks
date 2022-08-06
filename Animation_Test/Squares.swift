@@ -63,6 +63,8 @@ struct Squares: View {
             }
             
         }
+        .opacity(letter == " " ? 0 : 1)
+
     }
 }
 

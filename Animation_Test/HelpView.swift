@@ -27,17 +27,17 @@ struct HelpView: View {
                     HStack{
                         VStack{
                             Image(systemName: brailleDict[letter]!.digits2()[0] == 1 ? "circle.fill" : "circle")
-                                .font(.system(size: 68))
+                                .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
                             Image(systemName: brailleDict[letter]!.digits2()[2] == 1 ? "circle.fill" : "circle")
-                                .font(.system(size: 68))
+                                .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
                             Image(systemName: brailleDict[letter]!.digits2()[4] == 1 ? "circle.fill" : "circle")
-                                .font(.system(size: 68))
+                                .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
@@ -46,17 +46,17 @@ struct HelpView: View {
                         
                         VStack{
                             Image(systemName: brailleDict[letter]!.digits2()[1] == 1 ? "circle.fill" : "circle")
-                                .font(.system(size: 68))
+                                .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
                             Image(systemName: brailleDict[letter]!.digits2()[3] == 1 ? "circle.fill" : "circle")
-                                .font(.system(size: 68))
+                                .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
                             Image(systemName: brailleDict[letter]!.digits2()[5] == 1 ? "circle.fill" : "circle")
-                                .font(.system(size: 68))
+                                .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
@@ -67,7 +67,7 @@ struct HelpView: View {
                 ForEach(0..<letter.count, id:\.self) { num in
                     VStack{
                 Text("**\(letter)**")
-                    .font(.custom("Menlo", size: 50))
+                    .font(.custom("Menlo", size: 54))
                     .textCase(.uppercase)
                     }
                     .tag(num)

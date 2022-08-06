@@ -20,26 +20,25 @@ struct NewCompleteView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false){
                     VStack{
-                        //PRIMA RIGA: CODICE BRAILLE CORRETTO IN NERO
-                        //                        Image(colorScheme == .light ? "string_black" : "string_white")
-                        //                           .frame(width: 1450, height: 80)
+//PRIMA RIGA: CODICE BRAILLE CORRETTO IN NERO
                         HStack{
                             if(text != "") {
                                 ForEach(0..<text.count, id:\.self){ index in
-                                Squares(letter: " ")
+                                    Squares(letter: String(text[text.index(text.startIndex, offsetBy: index)]))
                             }
 //                                .padding(.horizontal,2)
                             }else{
                                 ForEach(0..<text2!.count, id:\.self){ index in
-                                    Squares(letter: " ")
+                                    Squares(letter: String((text2 ?? "")[(text2 ?? "").index(text2?.startIndex ?? "".startIndex, offsetBy: index)]))
                                 }
 //                                .padding(.horizontal,2)
                             }
 
-                        }                        //SECONDA RIGA: FRASE CARATTERI STANDARD
+                        }
+//SECONDA RIGA: FRASE CARATTERI STANDARD
                         FraseFinal(text: $text, text2: $text2)
                         
-                        //TERZA RIGA: CODICE BRAILLE INSERITO DALL'UTENTE (BLU CORRETTO, ROSSO ERRATO)
+//TERZA RIGA: CODICE BRAILLE INSERITO DALL'UTENTE (BLU CORRETTO, ROSSO ERRATO)
                         //                    Image("string_color")
                         //                        .frame(width: 1450, height: 80)
                         

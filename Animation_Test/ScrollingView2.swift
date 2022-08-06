@@ -95,7 +95,7 @@ struct ScrollingView2: View {
                         Image(systemName: "info.circle")
                     
                 }).sheet(isPresented: $showingSheet) {
-                    HelpView(letter: " ")
+                    HelpView(letter: letters[tabTag])
                 }
             }
         }.onAppear(perform: {

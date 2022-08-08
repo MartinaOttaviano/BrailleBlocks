@@ -110,7 +110,7 @@ struct FraseFinal: View{
             ForEach(0..<frase.count, id:\.self){ index in
                 Text(String(frase[frase.index(frase.startIndex, offsetBy: index)]))
                     .opacity(0.4)
-                    .font(.custom("Menlo", size: 90))
+                    .font(.custom("Menlo", size: 89))
                     .foregroundColor(.black)
                 
                 

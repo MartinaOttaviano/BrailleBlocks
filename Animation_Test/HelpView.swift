@@ -9,9 +9,10 @@ import Foundation
 import SwiftUI
 
 struct HelpView: View {
-    @State var letters: [String] = []
-    @State var letter: String
+    @Binding var letters: [String] 
+//    @State var letter: String
     @State var array: [String] = []
+    @Binding var tabTag: Int
 //    @State var letters: [String] = []
     var body: some View{
         
@@ -26,17 +27,17 @@ struct HelpView: View {
                     
                     HStack{
                         VStack{
-                            Image(systemName: brailleDict[letter]!.digits2()[0] == 1 ? "circle.fill" : "circle")
+                            Image(systemName: brailleDict[letters[tabTag]]!.digits2()[0] == 1 && letters[tabTag] != "_" ? "circle.fill" : "circle")
                                 .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
-                            Image(systemName: brailleDict[letter]!.digits2()[2] == 1 ? "circle.fill" : "circle")
+                            Image(systemName: brailleDict[letters[tabTag]]!.digits2()[2] == 1 && letters[tabTag] != "_" ? "circle.fill" : "circle")
                                 .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
-                            Image(systemName: brailleDict[letter]!.digits2()[4] == 1 ? "circle.fill" : "circle")
+                            Image(systemName: brailleDict[letters[tabTag]]!.digits2()[4] == 1 && letters[tabTag] != "_" ? "circle.fill" : "circle")
                                 .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
@@ -45,17 +46,17 @@ struct HelpView: View {
                         }
                         
                         VStack{
-                            Image(systemName: brailleDict[letter]!.digits2()[1] == 1 ? "circle.fill" : "circle")
+                            Image(systemName: brailleDict[letters[tabTag]]!.digits2()[1] == 1 && letters[tabTag] != "_" ? "circle.fill" : "circle")
                                 .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
-                            Image(systemName: brailleDict[letter]!.digits2()[3] == 1 ? "circle.fill" : "circle")
+                            Image(systemName: brailleDict[letters[tabTag]]!.digits2()[3] == 1 && letters[tabTag] != "_" ? "circle.fill" : "circle")
                                 .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
                                 .frame(width: 95, height: 90, alignment: .center)
-                            Image(systemName: brailleDict[letter]!.digits2()[5] == 1 ? "circle.fill" : "circle")
+                            Image(systemName: brailleDict[letters[tabTag]]!.digits2()[5] == 1 && letters[tabTag] != "_" ? "circle.fill" : "circle")
                                 .font(.system(size: 54))
                                 .foregroundColor(.gray)
                                 .opacity(0.3)
@@ -64,9 +65,9 @@ struct HelpView: View {
                         }
                     }
                 }
-                ForEach(0..<letter.count, id:\.self) { num in
+                ForEach(0..<letters[tabTag].count, id:\.self) { num in
                     VStack{
-                Text("**\(letter)**")
+                Text("**\(letters[tabTag])**")
                     .font(.custom("Menlo", size: 54))
                     .textCase(.uppercase)
                     }
@@ -127,8 +128,8 @@ extension Int {
         return digits2.reversed()
     }
 }
-struct HelpView_Previews: PreviewProvider {
-    static var previews: some View {
-        HelpView(letter: "a")
-    }
-}
+//struct HelpView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HelpView(tabTag: "")
+//    }
+//}

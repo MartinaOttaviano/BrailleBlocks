@@ -24,6 +24,7 @@ struct ScrollingView2: View {
                 ForEach(0..<letters.count, id:\.self) { num in
                     VStack{
                         BrailleView()
+                            
                         //                Text("T")
                         Text("**\(letters[num])**")
                             .font(.custom("Menlo", size: 50))
@@ -31,9 +32,15 @@ struct ScrollingView2: View {
                             
                     }
                     .tag(num)
+                    
                 }
             }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.5)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+//                .onAppear{
+//                    let value = tabTag
+//                    tabTag = -1
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {tabTag = value})
+//                }
             
             
 //        Text(frase)
@@ -95,7 +102,7 @@ struct ScrollingView2: View {
                         Image(systemName: "info.circle")
                     
                 }).sheet(isPresented: $showingSheet) {
-                    HelpView(letter: letters[tabTag])
+                    HelpView(letters: $letters, tabTag: $tabTag)
                 }
             }
         }.onAppear(perform: {

@@ -66,5 +66,6 @@ var brailleDict: [String: Int] = [
     "Z": 100111,
     
 //    SPAZIO
-    " ": 111111
+    " ": 111111,
+    "_": 111111
 ]
